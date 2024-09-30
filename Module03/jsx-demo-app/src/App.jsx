@@ -7,11 +7,19 @@ function App() {
     lastName: 'Peter',
     age: 25
   }
+
+  const showDetail = () =>{
+    return <h2>{person.firstName} {person.lastName} age is {person.age}</h2>
+  }
+
+  const myStyle = {color:'green', backgroundColor: 'lightgreen'}
   return (
       <>
+      <div style={myStyle}>Working with Inline sytles in JSX</div>
+      <div className='myDiv'>Working with CSS Stylesheets</div>
         {message}
         <hr/>
-        <h2>{person.firstName} {person.lastName} age is {person.age}</h2>
+        {showDetail()}
         <img src='/src/assets/react.svg' alt="React logo" />
       </>
   )

@@ -18,7 +18,7 @@ let myPromise = new Promise((resolve, reject)=>{
 // Consume promise using then() and catch()
 myPromise.then((res)=>console.log(res)).catch((err)=>console.log(err))
 
-// Consume promise using aysnc / await
+// Consume promise using async / await
 const myFunction = async () =>{
     try{
         let response = await myPromise
@@ -29,3 +29,4 @@ const myFunction = async () =>{
 }
 
 myFunction()
+console.log("The End");

@@ -9,6 +9,7 @@ console.log(myVariable);
 // A Block in JS
 {
     let blockVariable = "This is block variable"
+    // blockVariable=39
     blockVariable = `modified with 
                     Multi line
                     code`

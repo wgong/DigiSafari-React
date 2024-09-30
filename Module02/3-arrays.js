@@ -20,6 +20,9 @@ console.log(present);
 let result = myArray.find((num)=> num>100)
 console.log(result);
 
+console.log('Index of 40 is ',myArray.indexOf(40));
+
+
 // Map function with array
 let doubled = myArray.map((num)=> num*2)
 console.log(doubled);

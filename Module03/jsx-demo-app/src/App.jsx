@@ -34,7 +34,7 @@ function App() {
       <h1>Working with List</h1>
       {
         todoList.length == 0 ? <h2>No Todo Items</h2>:
-        todoList.map((item)=> <p className={ !item.isCompleted && 'pending'} key={item.id}>{item.title} - {showStatus(item.isCompleted)}</p>)
+        todoList.map((item)=> <p className={ item.isCompleted? 'completed':'pending'} key={item.id}>{item.title} - {showStatus(item.isCompleted)}</p>)
       }
     </div>
   )

@@ -1,18 +1,13 @@
 
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Counter from './components/Counter'
 
 function App() {  
-  let count = 0;
-  const incrementCount = () =>{
-    count ++;
-    console.log(count);    
-  }
+  
   return (
     <>
-      <h3>Current Count: {count}</h3>
-      <button onClick={incrementCount}>Increment</button>
+      <h2>State Management in React</h2>
+      <Counter />
     </>
   )
 }

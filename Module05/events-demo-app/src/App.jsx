@@ -4,7 +4,7 @@ import HoverComponent from './components/HoverComponent'
 
 function App() {
  const handleClick = (msg)=>console.log('Button Clicked, with '+ msg)
- const handleHover = () => console.log('Hover works')
+ const handleHover = (msg) => console.log('Hover works, with '+ msg)
   return (
     <>
      <h2>Working with Event Handling</h2>

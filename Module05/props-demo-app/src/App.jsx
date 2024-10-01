@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <h1>Working with Props</h1>
-      <ProductDetail />
+      <ProductDetail title="iPhone 15" category="Phone" price={1232}/>
     </>
   )
 }

@@ -1,11 +1,12 @@
 import React from 'react'
 
-function ProductDetail(props) {
+function ProductDetail({title, category, price }) {
+  // const {title, category, price } = props
   return (
     <div>
-      <h3>Title: {props.title}</h3>
-      <h4>Category: {props.category}</h4>
-      <h3>Price: {props.price}</h3>
+      <h3>Title: {title}</h3>
+      <h4>Category: {category}</h4>
+      <h3>Price: {price}</h3>
       <hr/>
     </div>
   )

@@ -1,12 +1,38 @@
 import './App.css'
-import ProductDetail from './components/ProductDetail'
+import Products from './components/Products'
+
 
 function App() {
- 
+
+  const productList = [
+    {
+      id: 1,
+      name: "IPhone 14",
+      category: "Smart Phone",
+      price: 2343
+    },
+    {
+      id: 2,
+      name: "HP Pavilion",
+      category: "Laptop",
+      price: 3423
+    },
+    {
+      id: 3,
+      name: "Dell Vestro",
+      category: "Laptop",
+      price: 4564
+    }
+  ]
+
   return (
     <>
       <h1>Working with Props</h1>
-      <ProductDetail title="iPhone 15" category="Phone" price={1232}/>
+      <Products productList={productList}/>
+      
+      {/* <ProductDetail title="iPhone 15" category="Phone" price={1232}/>
+      <ProductDetail title="iPhone 14" category="Phone" price={4534}/>
+      <ProductDetail title="iPhone 13" category="Phone" price={3452}/> */}
     </>
   )
 }

@@ -18,7 +18,7 @@ function FriendsList() {
         {
             friends.map((friend, index)=> (<li key={index}>
                                                 {friend}
-                                            <button onClick={()=> removeAFriend(index)}>X</button>
+                                            <button onClick={()=> { removeAFriend(index);}}>X</button>
                                             </li>)
                         )
         }

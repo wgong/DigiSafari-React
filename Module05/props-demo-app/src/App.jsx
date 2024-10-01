@@ -1,7 +1,10 @@
+import { createContext } from 'react'
 import './App.css'
 import Products from './components/Products'
 import PromoOffer from './components/PromoOffer'
 
+// Creating the context and export
+export const Discount = createContext(0)
 
 function App() {
 
@@ -27,13 +30,15 @@ function App() {
   ]
 
   // const categories = ["smart phone", "Laptop"]
-
+  const flatDiscount = 15
   return (
     <>
       <h1>Working with Props</h1>
-      <Products productList={productList} flatDiscount= {10} >
-        <PromoOffer />
-      </Products>
+      <Discount.Provider value={flatDiscount}>
+        <Products productList={productList} >
+          <PromoOffer />
+        </Products>
+      </Discount.Provider>      
       
       {/* <ProductDetail title="iPhone 15" category="Phone" price={1232}/>
       <ProductDetail title="iPhone 14" category="Phone" price={4534}/>

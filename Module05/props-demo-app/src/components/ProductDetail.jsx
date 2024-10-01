@@ -1,7 +1,10 @@
 import React from 'react'
+import { useContext } from 'react'
+import { Discount } from '../App'
 
-function ProductDetail({title, category = "Unknown", price, promo, flatDiscount = 0 }) {
+function ProductDetail({title, category = "Unknown", price, promo }) {
   // const {title, category, price } = props
+  const flatDiscount = useContext(Discount)
   return (
     <div>
       <h3>Title: {title}</h3>

@@ -1,5 +1,6 @@
 import './App.css'
 import Products from './components/Products'
+import PromoOffer from './components/PromoOffer'
 
 
 function App() {
@@ -28,7 +29,9 @@ function App() {
   return (
     <>
       <h1>Working with Props</h1>
-      <Products productList={productList}/>
+      <Products productList={productList}>
+        <PromoOffer />
+      </Products>
       
       {/* <ProductDetail title="iPhone 15" category="Phone" price={1232}/>
       <ProductDetail title="iPhone 14" category="Phone" price={4534}/>

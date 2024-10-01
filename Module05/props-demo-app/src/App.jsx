@@ -31,7 +31,7 @@ function App() {
   return (
     <>
       <h1>Working with Props</h1>
-      <Products productList={productList} >
+      <Products productList={productList} flatDiscount= {10} >
         <PromoOffer />
       </Products>
       

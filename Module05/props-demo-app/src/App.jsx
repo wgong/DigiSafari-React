@@ -26,10 +26,12 @@ function App() {
     }
   ]
 
+  // const categories = ["smart phone", "Laptop"]
+
   return (
     <>
       <h1>Working with Props</h1>
-      <Products productList={productList}>
+      <Products productList={productList} >
         <PromoOffer />
       </Products>
       

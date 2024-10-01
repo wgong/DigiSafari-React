@@ -1,6 +1,7 @@
 
 import './App.css'
 import Counter from './components/Counter'
+import FriendsList from './components/FriendsList'
 import Name from './components/Name'
 
 function App() {  
@@ -8,8 +9,9 @@ function App() {
   return (
     <>
       <h2>State Management in React</h2>
-      <Counter />
+      {/* <Counter /> */}
       {/* <Name /> */}
+      <FriendsList />
     </>
   )
 }

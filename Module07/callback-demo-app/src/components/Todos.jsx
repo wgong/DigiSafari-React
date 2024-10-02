@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { memo, useRef } from 'react'
 
 function Todos({todoList, addTodoItem}) {
     const newItemRef = useRef()
@@ -16,4 +16,4 @@ function Todos({todoList, addTodoItem}) {
   )
 }
 
-export default Todos
+export default memo(Todos) 

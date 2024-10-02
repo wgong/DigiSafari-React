@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 function Counter({count, increment}) {
     console.log("Rendering Counter component...");    
@@ -10,4 +10,4 @@ function Counter({count, increment}) {
   )
 }
 
-export default Counter
+export default memo(Counter)

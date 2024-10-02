@@ -1,10 +1,16 @@
 {
-    "products":[
-        {
-            "id":1,
-            "title": "iPhone 15",
-            "category": "Phone",
-            "price": 12312
-        }
-    ] 
+  "products": [
+    {
+      "id": 1,
+      "title": "iPhone 15",
+      "category": "Phone",
+      "price": 12312
+    },
+    {
+      "title": "iPhone 14",
+      "category": "Phone",
+      "price": 44353,
+      "id": 2
+    }
+  ]
 }

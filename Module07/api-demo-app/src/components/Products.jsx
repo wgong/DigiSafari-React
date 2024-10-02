@@ -19,6 +19,23 @@ function Products() {
         getAllProducts()
     }, [])
 
+    const deleteProduct = async (id) => {
+        try{
+            await axios.delete('http://localhost:3000/products/'+id)
+            getAllProducts()
+        }catch(err){
+            console.log(err);
+            
+        }
+    }
+
+    const deleteHandler = (id)=>{
+        const result = window.confirm('Are you sure, want to delete the product?')
+        if(result){
+            deleteProduct(id)
+        }
+    }
+
   return (
     <div>
         <h1>List of Products</h1>
@@ -29,6 +46,7 @@ function Products() {
                     <th>Title</th>
                     <th>Category</th>
                     <th>Price</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,6 +56,9 @@ function Products() {
                                                     <td>{product.title}</td>
                                                     <td>{product.category}</td>
                                                     <td>{product.price}</td>
+                                                    <td>
+                                                        <button onClick={()=>deleteHandler(product.id)} className='btn btn-danger'>Delete</button>
+                                                    </td>
                                                 </tr>))
                 }
             </tbody>

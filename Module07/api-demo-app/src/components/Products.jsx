@@ -8,7 +8,7 @@ function Products() {
 
     const getAllProducts = () =>{
         axios.get('http://localhost:3000/products').then((response)=>{
-            // console.log(response.data)
+            // console.log(response)
             setProductList(response.data)
         }).catch((error)=>{
             console.log(error);            

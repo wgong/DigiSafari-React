@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useRef, useState } from 'react'
 
 function AddProduct() {
@@ -7,6 +8,23 @@ function AddProduct() {
     const [error, setError] = useState(null)
     const [message, setMessage] = useState(null)
 
+    const insertProduct= async (newProduct)=>{
+        try{
+            const {data, status} = await axios.post('http://localhost:3000/products', newProduct)
+            if(status == 201 && data.id){
+                titleRef.current.value = ''
+                categoryRef.current.value = ''
+                priceRef.current.value = ''
+                setMessage('Product created successfully')
+            }else{
+                setError('Something went wrong, Please try again')
+            }
+        }catch(err){
+            setError("API Error: ", err.message)
+        }
+    }
+
+
     const submitHandler = (event)=>{
         event.preventDefault()
         let title = titleRef.current.value;
@@ -14,9 +32,11 @@ function AddProduct() {
         let price = priceRef.current.value;
 
         if(title && category && price){
-            setMessage("Form fields are valid")
+            // setMessage("Form fields are valid")
             setError(null)
-            console.log(title, category, price);            
+             const newProduct = {title, category, price}
+             console.log(newProduct);             
+            insertProduct(newProduct)         
         }else{
             setMessage(null)
             setError("Title, category and price are required")

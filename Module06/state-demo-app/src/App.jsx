@@ -1,5 +1,6 @@
 
 import './App.css'
+import Calculator from './components/Calculator'
 import Counter from './components/Counter'
 import FriendsList from './components/FriendsList'
 import Movie from './components/Movie'
@@ -13,7 +14,8 @@ function App() {
       {/* <Counter /> */}
       {/* <Name /> */}
       {/* <FriendsList /> */}
-      <Movie />
+      {/* <Movie /> */}
+      <Calculator />
     </>
   )
 }

@@ -13,9 +13,9 @@ function Login() {
         }
     }
     const submitHandler = (event) =>{
-        event.preventDefault();
-        setErrorMessage(null)
+        event.preventDefault();       
         if(username != '' && password !=''){
+            setErrorMessage(null)
             console.log("Form Submitted", username, password)
         }else{
             setErrorMessage('Username and Password is Required')
@@ -24,7 +24,7 @@ function Login() {
     }
   return (
     <div>
-        <h1>Login</h1>
+        <h1>Login form using useState</h1>
         {errorMessage && <p style={{color: "red"}}>{errorMessage}</p>}
         <form onSubmit={submitHandler}>
             <div>

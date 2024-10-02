@@ -23,6 +23,12 @@
       "category": "Laptop",
       "price": "34533",
       "id": 5
+    },
+    {
+      "title": "iPhone 13",
+      "category": "Phone",
+      "price": "3453",
+      "id": 6
     }
   ]
 }

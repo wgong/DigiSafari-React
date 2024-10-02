@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useRef, useState } from 'react'
 
-function AddProduct() {
+function AddProduct({getAllProducts}) {
     const titleRef = useRef()
     const categoryRef = useRef()
     const priceRef = useRef()
@@ -16,6 +16,7 @@ function AddProduct() {
                 categoryRef.current.value = ''
                 priceRef.current.value = ''
                 setMessage('Product created successfully')
+                getAllProducts()
             }else{
                 setError('Something went wrong, Please try again')
             }

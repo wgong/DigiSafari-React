@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import AddProduct from './AddProduct'
 
 function Products() {
     const [productList, setProductList] = useState([])
@@ -37,32 +38,40 @@ function Products() {
     }
 
   return (
+
     <div>
-        <h1>List of Products</h1>
-        <table className='table'>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Category</th>
-                    <th>Price</th>
-                    <th>Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                {
-                    productList.map((product)=> (<tr key={product.id}>
-                                                    <td>{product.id}</td>
-                                                    <td>{product.title}</td>
-                                                    <td>{product.category}</td>
-                                                    <td>{product.price}</td>
-                                                    <td>
-                                                        <button onClick={()=>deleteHandler(product.id)} className='btn btn-danger'>Delete</button>
-                                                    </td>
-                                                </tr>))
-                }
-            </tbody>
-        </table>
+        <div className='row'>
+            <div className='col-md-8'>
+            <h1>List of Products</h1>
+            <table className='table'>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        productList.map((product)=> (<tr key={product.id}>
+                                                        <td>{product.id}</td>
+                                                        <td>{product.title}</td>
+                                                        <td>{product.category}</td>
+                                                        <td>{product.price}</td>
+                                                        <td>
+                                                            <button onClick={()=>deleteHandler(product.id)} className='btn btn-danger'>Delete</button>
+                                                        </td>
+                                                    </tr>))
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div className='col-md-4'>
+          <AddProduct getAllProducts={getAllProducts}/>
+        </div>
+      </div>        
     </div>
   )
 }

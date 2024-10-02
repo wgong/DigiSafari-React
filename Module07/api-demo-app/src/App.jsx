@@ -7,10 +7,10 @@ import Products from './components/Products'
 function App() { 
 
   return (
-    <>
+    <div className='container'>
       <h1>Working with Products API</h1>
       <Products />
-    </>
+    </div>
   )
 }
 
